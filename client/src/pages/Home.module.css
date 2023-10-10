@@ -1,0 +1,17 @@
+.loginButton {
+    background-color: rgb(48, 48, 48);
+    width: 120px;
+    height: 40px;
+    font-weight: semi-bold;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(22, 22, 22);
+}
+
+.link {
+    color: white;
+}
+
+.link:hover {
+    color: rgb(0, 174, 255);
+}
