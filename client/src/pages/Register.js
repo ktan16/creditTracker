@@ -11,6 +11,7 @@ const Register = () => {
 
   const uploadUser = async (e) => {
     e.preventDefault();
+
     try {
       const body = { name, email, password, max };
       const response = await fetch("http://localhost:5000/users/register", {
