@@ -1,9 +1,24 @@
 .inputBox {
-    width: 25%;
-    margin: 0 auto;
-    background-color: rgb(48, 48, 48);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgb(22, 22, 22);
+  width: 25%;
+  margin: 0 auto;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(22, 22, 22);
+}
+
+.loginButton {
+  background-color: rgb(48, 48, 48);
+  color: white;
+  width: 120px;
+  height: 40px;
+  font-weight: semi-bold;
+  border-radius: 10px;
+  border: 1px solid rgb(22, 22, 22);
+}
+
+.loginButton:hover {
+  background-color: rgb(0, 89, 255);
+  color: rgb(255, 255, 255);
 }

@@ -1,11 +1,11 @@
-import './App.css';
-import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom';
-import React, { Fragment } from 'react';
+import "./App.css";
+import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import React, { Fragment } from "react";
 // Pages
-// import Home from './pages/Home';
-// import Login from './pages/Login';
-// import Register from './pages/Register';
-import Dashboard from './pages/Dashboard';
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -22,7 +22,10 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="users/:user_id" element={<Dashboard />}/>
+          <Route index element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="users/:user_id" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </div>
