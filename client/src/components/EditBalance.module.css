@@ -1,0 +1,20 @@
+.textBox {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(22, 22, 22);
+}
+
+.submitButton {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(22, 22, 22);
+}
+
+.submitButton:hover{
+    background-color: rgb(0, 89, 255);
+    color: rgb(255, 255, 255);
+}

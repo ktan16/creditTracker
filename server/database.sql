@@ -5,7 +5,7 @@ CREATE TABLE accounts(
     user_name VARCHAR(255) NOT NULL,
     user_email VARCHAR(255) NOT NULL,
     user_password VARCHAR(255) NOT NULL,
-    user_balance INT DEFAULT 0,
-    user_max INT NOT NULL,
+    user_balance NUMERIC(10, 2) DEFAULT 0,
+    user_max NUMERIC(10, 2) NOT NULL,
     UNIQUE (user_email)
 );

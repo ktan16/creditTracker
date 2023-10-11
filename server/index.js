@@ -37,11 +37,10 @@ app.put("/users/:user_id", async(req, res) => {
             "SELECT * FROM accounts WHERE user_id = $1",
             [user_id]
         );
-
-        const userBalance = account.rows[0].user_balance;
-        const userMax = account.rows[0].user_max;
         
-        const newBalance = userBalance + change;
+        const userBalance = parseFloat(account.rows[0].user_balance);
+        
+        const newBalance = userBalance + parseFloat(change);
 
         await pool.query(
             "UPDATE accounts SET user_balance = $1 WHERE user_id = $2",
