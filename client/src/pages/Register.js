@@ -43,7 +43,7 @@ const Register = () => {
 
         <div className="mt-3">
           <input
-            type="text"
+            type="email"
             placeholder="Email"
             className={LoginCSS.inputBox}
             value={email}
@@ -53,7 +53,7 @@ const Register = () => {
 
         <div className="mt-3">
           <input
-            type="text"
+            type="password"
             placeholder="Password"
             className={LoginCSS.inputBox}
             value={password}
