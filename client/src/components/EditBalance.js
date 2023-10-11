@@ -1,5 +1,5 @@
 import EditBalanceCSS from "./EditBalance.module.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const EditBalance = ({ account }) => {
   const user_id = account.user_id;
@@ -44,33 +44,22 @@ const EditBalance = ({ account }) => {
 
   return (
     <div>
-      <div>
-        <input
-          type="text"
-          name="add"
-          className={EditBalanceCSS.textBox}
-          placeholder="amount to add"
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-        />
-      </div>
-
-      <div className="mt-3">
-        <input
-          type="text"
-          name="subtract"
-          className={EditBalanceCSS.textBox}
-          placeholder="amount to subtract"
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-        />
-      </div>
-
-      <div className="mt-3">
-        <button className={EditBalanceCSS.submitButton} onClick={updateBalance}>
-          Submit
-        </button>
-      </div>
+      <input
+        type="text"
+        name="add"
+        className={EditBalanceCSS.addBox}
+        placeholder="Spent"
+        onChange={handleInputChange}
+        onKeyDown={handleKeyDown}
+      ></input>
+      <input
+        type="text"
+        name="subtract"
+        className={EditBalanceCSS.subtractBox}
+        placeholder="Returned"
+        onChange={handleInputChange}
+        onKeyDown={handleKeyDown}
+      ></input>
     </div>
   );
 };

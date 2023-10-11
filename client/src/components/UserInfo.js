@@ -6,7 +6,11 @@ import EditBalance from "./EditBalance";
 const UserInfo = () => {
   const { user_id } = useParams();
   const [account, setAccount] = useState(null);
-  const [balance, setBalance] = useState(0);
+
+  const signOut = (e) => {
+    e.preventDefault();
+    window.location = "/";
+  };
 
   const getInfo = async () => {
     try {
@@ -21,19 +25,24 @@ const UserInfo = () => {
 
   useEffect(() => {
     getInfo();
-  }, [user_id]);
+  });
 
   return (
     <div>
       {account ? (
         <div>
-          <h1>Hello, {account.user_name}</h1>
-
-          <p>ID: {account.user_id}</p>
-          <p>Email: {account.user_email}</p>
-          <p>Password: {account.user_password}</p>
-          <p>Balance: ${account.user_balance}</p>
-          <p>Max: ${account.user_max}</p>
+          <div className={UserInfoCSS.subBox}>
+            <div className={UserInfoCSS.sayHi}>Hi, {account.user_name}</div>
+            <div className={UserInfoCSS.balanceContainer}>
+              ${account.user_balance}
+              <div className={UserInfoCSS.maxContainer}>
+                Limit: ${account.user_max}
+              </div>
+            </div>
+            <button className={UserInfoCSS.signOut} onClick={signOut}>
+              Log Out
+            </button>
+          </div>
 
           <EditBalance account={account} />
         </div>

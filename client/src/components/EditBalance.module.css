@@ -1,20 +1,37 @@
-.textBox {
-  background-color: rgb(48, 48, 48);
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid rgb(22, 22, 22);
+.addBox {
+  position:absolute;
+  top: 0px;
+  right: 0px;
+  height: 50vh;
+  width: 75vw;
+  background: rgb(3, 141, 14);
+  border-color: rgb(3, 141, 14);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100px;
+  color: rgb(3, 78, 10);
 }
 
-.submitButton {
-  background-color: rgb(48, 48, 48);
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid rgb(22, 22, 22);
+.addBox::placeholder {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100px;
+  color: rgb(3, 78, 10);
 }
 
-.submitButton:hover {
-  background-color: rgb(0, 89, 255);
-  color: rgb(255, 255, 255);
+.subtractBox {
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 50vh;
+  width: 75vw;
+  background: rgb(143, 0, 0);
+  border-color: rgb(143, 0, 0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100px;
+  color: rgb(90, 0, 0);
+}
+
+.subtractBox::placeholder {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100px;
+  color: rgb(90, 0, 0);
 }
