@@ -1,13 +1,22 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import LoginCSS from "./Login.module.css";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const proceedLogin = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div>
-      <h1 className="m-5">Login</h1>
-      <form className="m-5">
-        <div>
+    <div className="m-5">
+      <h1>Login</h1>
+
+      <form onSubmit={proceedLogin}>
+        <div className="mt-3">
           <input
             type="text"
             placeholder="Email"
@@ -22,10 +31,15 @@ const Login = () => {
             className={LoginCSS.inputBox}
           />
         </div>
+
+        <div className="mt-3">
+          <button className={LoginCSS.loginButton}>Submit</button>
+        </div>
       </form>
 
-      <div>
-        <button className={LoginCSS.loginButton}></button>
+      <div className="mt-3">
+        New user?
+        <Link to="/register"> Click here to register.</Link>
       </div>
     </div>
   );

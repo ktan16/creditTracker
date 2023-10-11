@@ -56,11 +56,11 @@ app.put("/users/:user_id", async (req, res) => {
 // register
 app.post("/users/register", async (req, res) => {
   try {
-    const { name, email, password, balance } = req.body;
+    const { name, email, password, max } = req.body;
 
     const newUser = await pool.query(
-      "INSERT INTO accounts (user_name, user_email, user_password, user_balance) VALUES ($1, $2, $3, $4) RETURNING *",
-      [name, email, password, balance]
+      "INSERT INTO accounts (user_name, user_email, user_password, user_max) VALUES ($1, $2, $3, $4) RETURNING *",
+      [name, email, password, max]
     );
 
     res.json(newUser.rows[0]);
